@@ -9,90 +9,54 @@
 .normal {
     background-color: #a6a877;
 }
-
 .grass {
     background-color: #77c850;
 }
-
 .fire {
     background-color: #ee7f30;
 }
-
-.bgColor.fire {
-    position: relative; /* Necessário para a posição absoluta do pseudo-elemento */
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.bgColor.fire::before {
-    content: ""; /* Adiciona um conteúdo vazio ao pseudo-elemento */
-    background-image: url(https://archives.bulbagarden.net/media/upload/9/94/TeraGem_Fire.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute; /* Coloca o pseudo-elemento em posição absoluta dentro do elemento pai */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0.2;
-}
-
 .water {
     background-color: #678fee;
 }
-
 .electric {
     background-color: #f7cf2e;
 }
-
 .ice {
     background-color: #98d5d7;
 }
-
 .ground {
     background-color: #dfbf69;
 }
-
 .flying {
     background-color: #a98ff0;
 }
-
 .poison {
     background-color: #a040a0;
 }
-
 .fighting {
     background-color: #bf3029;
 }
-
 .psychic {
     background-color: #f65687;
 }
-
 .dark {
     background-color: #725847;
 }
-
 .rock {
     background-color: #b8a137;
 }
-
 .bug {
     background-color: #a8b720;
 }
-
 .ghost {
     background-color: #6e5896;
 }
-
 .steel {
     background-color: #b9b7cf;
 }
-
 .dragon {
     background-color: #6f38f6;
 }
-
 .fairy {
     background-color: #f9aec7;
 }
@@ -139,6 +103,10 @@
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
+}
+
+.TypeIcon {
+    opacity: 0.2;
 }
 
 .pokemon .detail img {
