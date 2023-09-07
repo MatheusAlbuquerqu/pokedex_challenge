@@ -49,17 +49,54 @@ function convertPokemonToLi(pokemon) {
         <li class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
-    
-            <div class="detail">
+
+
+            <div  class="detail">
                 <ol class="types">
                     ${pokemon.types.map((type) => `<li class="type ${type} backgroundClr">${type}</li>`).join('')}
                 </ol>
                 <img class="TypeIcon" src="${pokemonTypeIcon}" alt="">
-                <img src="${pokemon.picture}" alt="${pokemon.name}">
+                <img onclick="handleClick('modal-${pokemon.name}')" class="pokemonImage" src="${pokemon.picture}" alt="${pokemon.name}">
+                                         
+                
             </div>
         </li>
-    `
+
+        <div onclick="closeFade('fade')" id="fade">
+            <div class="pokeModal" id="modal-${pokemon.name}">
+                
+            <div class="modal-header">
+                    
+
+                <img onclick="closeClick('modal-${pokemon.name}')" id="closeModal" src="https://static.wikia.nocookie.net/pokemon-vpk/images/4/45/Pok%C3%A9_Bola.png/revision/latest?cb=20160904234552&path-prefix=pt-br" alt="pokeball">
+
+                <h2>${pokemon.name}</h2>
+                
+                <ol>
+                <li>${pokemon.type}</li>
+                <li>${pokemon.name}</li>
+                <li>${pokemon.number}</li>
+                
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, quam?
+                        Quas accusantium id cupiditate iste veritatis repudiandae odio dolore
+                        voluptas. Eum, deserunt quod. Sit similique laudantium assumenda
+                        repellat vel necessitatibus.
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius alias
+                        voluptate doloremque, totam inventore autem quis non error! Earum
+                        ullam fuga, officiis voluptates pariatur unde et adipisci ducimus non
+                        obcaecati.
+                    </p>
+                </div>
+            </div>
+        </div>
+`
 }
+
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
@@ -85,3 +122,28 @@ loadMoreButton.addEventListener('click', () => {
 })
 
 
+function handleClick(id) {
+    let modal = document.getElementById(id)
+    modal.style.display = "block";
+    
+    let fade = document.getElementById('fade')
+    fade.style.display = "block";
+
+    console.log(modal)
+    console.log(modal.style.display)
+}
+
+
+
+function closeClick(id) {
+    let closeMd = document.getElementById(id)
+    closeMd.style.display = "none";
+    
+   
+}
+
+
+function closeFade(fade) {
+    let fadeClose = document.getElementById(fade)
+    fadeClose.style.display = "none";
+}

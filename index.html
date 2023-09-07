@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -15,34 +14,54 @@
     <!-- Fontes Google Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,300&display=swap"
+        rel="stylesheet">
 
     <!-- Meu Css -->
+    <link rel="stylesheet" href="./Pokedex_Curso_JS_Dio/css/modal.css">
     <link rel="stylesheet" href="./Pokedex_Curso_JS_Dio/css/global.css">
     <link rel="stylesheet" href="./Pokedex_Curso_JS_Dio/css/pokedex.css">
 
-    <link rel = "shortcut icon" type = "imagem/x-icon" href = "https://static.wikia.nocookie.net/pokemon-vpk/images/4/45/Pok%C3%A9_Bola.png/revision/latest?cb=20160904234552&path-prefix=pt-br"/>
-    
+
+    <link rel="shortcut icon" type="imagem/x-icon"
+        href="https://static.wikia.nocookie.net/pokemon-vpk/images/4/45/Pok%C3%A9_Bola.png/revision/latest?cb=20160904234552&path-prefix=pt-br" />
+
     <!-- Para gerar o link http para entrar no site digite no terminal "http-server ./" -->
 </head>
 
+
+
 <body>
+
     <section class="content">
-        <h1><img class="logoPoke" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="Pokemon"></h1>
+
+        <h1><img class="logoPoke"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
+                alt="Pokemon" id="openModal"></h1>
+      
+                
+
         <ol id="pokemonList" class="pokemons">
+
         </ol>
 
+
+        <div id="pokemonModal">
+        </div>
         <div class="pagination">
             <button id="loadMoreButton" type="button">
                 Load More Pokemons
             </button>
+
         </div>
+
     </section>
 
     <!-- Meu JS Script -->
     <script src="./Pokedex_Curso_JS_Dio/JS/pokemon_model.js"></script>
     <script src="./Pokedex_Curso_JS_Dio/JS/poke-api.js"></script>
     <script src="./Pokedex_Curso_JS_Dio/JS/main.js"></script>
+
 </body>
 
 </html>

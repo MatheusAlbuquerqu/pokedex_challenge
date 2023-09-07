@@ -30,7 +30,7 @@ body {
 }
 
 @media screen and (max-width: 390px) {
-    .logoPoke{
+    .logoPoke {
         max-width: 337px;
         margin: 1rem auto;
         border-radius: 1rem;
